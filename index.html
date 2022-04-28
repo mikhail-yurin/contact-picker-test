@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    const props = ['name', 'email', 'tel', 'address', 'icon'];
+    const opts = { multiple: false };
+
+    async function getContacts() {
+      try {
+        const contacts = await navigator.contacts.select(props, opts);
+        const inut = document.getElementById('phone');
+        inut.setAttribute('value', contacts[0].tel);
+      } catch (ex) {
+        alert(ex);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header></header>
+  <h2>contact picker test</h1>
+    <input type="tel" id="phone">
+    <button onclick="getContacts()" >Select contact</button>
+</body>
+
+</html>
