@@ -18,6 +18,11 @@
         alert('Contacts API is not supported. Error: ' + ex);
       }
     }
+    
+    const inut = document.getElementById('btn').remove();
+    if (!navigator?.userAgent?.toLowerCase.includes('chrome')) {
+      const inut = document.getElementById('btn').remove();
+    }
   </script>
 </head>
 
@@ -25,9 +30,7 @@
   <header></header>
   <h2>contact picker test</h1>
   <input type="tel" id="phone" name="tel">
-  <button onclick="getContacts()" >Select contact</button>
-  <br>
-  <input type="text">
+  <button onclick="getContacts()" id="btn">Select contact</button>
 </body>
 
 </html>
