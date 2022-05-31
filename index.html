@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=2.0" />
   <meta charset="utf-8">
   <title></title>
+</head>
+
+<body>
+  <header></header>
+  <h2>contact picker test</h1>
+  <input type="tel" id="phone" name="tel">
+  <button onclick="getContacts()" id="btn">Select contact</button>
+  
   <script>
     const props = ['name', 'email', 'tel', 'address', 'icon'];
     const opts = { multiple: false };
@@ -26,13 +34,6 @@
       btn.remove();
     }
   </script>
-</head>
-
-<body>
-  <header></header>
-  <h2>contact picker test</h1>
-  <input type="tel" id="phone" name="tel">
-  <button onclick="getContacts()" id="btn">Select contact</button>
 </body>
 
 </html>
